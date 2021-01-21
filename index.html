@@ -17,27 +17,33 @@
   <div class="container">
      
     <!-- Row 1-->
-    <div class="row">
+    <div class="row" id="heading">
         <div class="col">
             <h1>Looking for a More Secure Password?</h1>
       </div>
+
+      <br><br>
     
     <!-- Row 2-->  
-    <div class="row">
+    <div class="row" id="one-liner">
         <div class="col">
           <h2>Make a completely customizable and secure password right here!</h2>
         </div>  
 
+    <br><br>
+
     <!-- Row 3-->    
-    <div class="row">
+    <div class="row" id="description">
         <div class="col">
             <h3>Depending on your personal preferences, or website password requirements,
                 choose your level of security by selecting some (or all!) of the options below.
                 The generator will then produce your own unique password! </h3>
         </div> 
 
+        <br><br>
+
     <!-- Row 4-->    
-    <div class="row">
+    <div class="row" id="checkboxRow">
         <div class="col">
             <div class="form-check form-check-inline" id="lowerCaseButton">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
@@ -54,17 +60,19 @@
       </div> 
      
       <!-- Row 5-->
-      <div class="row">
+      <div class="row" id="radioRow">
         <div class="col-3">Include Special Characters?</div>
-        <div class="col-9">
-              <div class="form-check form-check-inline" id="">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Yes</label>
-              </div>
-              <div class="form-check form-check-inline" id="">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">No</label>
-              </div>
+          <div class="col-9">
+            <div class="form-check form-check-inline" id="">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Yes</label>
+            </div>
+            <div class="form-check form-check-inline" id="">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">No</label>
+            </div>
+          </div> 
+        </div> 
       </div> 
   
     <!-- Row 6-->  
@@ -75,7 +83,7 @@
   </div>
 
   <!-- Button-->
-  <button type="button">Generate Your Secure Password Here!</button>
-
+  <button id="generatorButton" type="button" class="btn btn-primary btn-lg">Generate Your Password Here!</button>
+  </div>
 </body>
 </html>

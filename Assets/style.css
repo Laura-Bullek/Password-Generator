@@ -1,14 +1,36 @@
-html, body {
+html {
     height:100%;
     width:100%;
     margin:0;
     padding:0;
+    text-align: center;
+    border: 3px solid gray;
+}
+body {
+    background-image: url("https://www.thesoftwarereport.com/wp-content/uploads/2019/12/cybersecurity.jpg");
+    padding: 20px;
+    border: 3px solid white;
+    text-align: center; 
+    margin: 250px 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#container {
+.container {
     display:inline-block;
     border:8px solid black;
-    width: 450px;
-    padding:50px 0;
-    background: blue;
+    padding: 10px;
+    background:white;
+    opacity: 90%;
+}
+#generatorButton {
+    margin: auto;
+    width: 50%;    
+}
+h2 {
+    font-size: 26px;
+}
+h3 {
+    font-size: 18px;
+    margin: auto 50px;
+    margin-bottom: 20px;
 }
