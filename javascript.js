@@ -26,6 +26,7 @@ const upperCaseButtonEl = document.getElementById("upperCaseButton")
 const numbersButtonEl = document.getElementById("numbersButton")
 const noSpecCharRadioEl = document.getElementById("noSpecCharRadio")
 const yesSpecCharRadioEl = document.getElementById("yesSpecCharRadio")
+const resultEl = document.getElementById("result")
 const generatorButtonEl = document.getElementById("generatorButton")
 
 // Generate event listener when generatorButton is clicked
@@ -40,7 +41,13 @@ generatorButtonEl.addEventListener("click", function() {
   const noSpecCharChecked = noSpecCharRadioEl.checked; 
   const yesSpecCharChecked = yesSpecCharRadioEl.checked; 
  
-  console.log(lowerCaseChecked, upperCaseChecked, numbersChecked, noSpecCharChecked, yesSpecCharChecked)
-
-  //
+  // Changing the inner text of the textarea box with the generated password result,
+  // and created the generatePassword function
+  resultEl.innerText = generatePassword (passwordLength, lowerCaseChecked, upperCaseChecked, numbersChecked, noSpecCharChecked, yesSpecCharChecked)
 });
+
+// Function that will actually be generating the function
+// pulling keys from the randomFunction object
+function generatePassword (lower, upper, number, specCharacters, passwordLength) {
+
+}
