@@ -60,8 +60,15 @@ function generatePassword (lower, upper, number, noSpecCharacters, yesSpecCharac
   
     let outputPassword = "";
 
-     const boxesChecked = lower + upper + number + noSpecCharacters + yesSpecCharacters;
+    const boxesChecked = lower + upper + number + noSpecCharacters + yesSpecCharacters;
     
-
     console.log(boxesChecked);
+
+    // Creating objects so each can have a boolean value
+    const boxesCheckedArr = [{ lower }, { upper }, { number }, { noSpecCharacters }, { yesSpecCharacters }].filter
+
+    // Filtering out any value that comes back false (unclicked) and won't be included in the password.
+    (item => Object.values(item)[0]);
+
+    console.log(boxesCheckedArr);
 }
