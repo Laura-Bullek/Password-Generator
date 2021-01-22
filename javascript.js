@@ -27,3 +27,4 @@ console.log(randomSpecialCharacters);
 
 
 // Slider code
+
