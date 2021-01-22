@@ -1,3 +1,18 @@
+// Generating strings for the password contens
+const genLowerCase = "abcdefghijklmnopqrstuvwxyz";
+const genUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const genNumbers = "0123456789"; 
+const genSpecCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"; 
+
+// Randomizing each string of letters, numbers, and special characters
+const randomLowerCase = genLowerCase [Math.floor(Math.random() * genLowerCase.length)];
+const randomUpperCase = genUpperCase [Math.floor(Math.random() * genUpperCase.length)];
+const randomNumbers = genNumbers [Math.floor(Math.random() * genNumbers.length)];
+const randomSpecialCharacters = genSpecCharacters [Math.floor(Math.random() * genSpecCharacters.length)];
+
+// Testing each randomizing variable
+console.log(randomSpecialCharacters);
+
 // Putting all of the randomization of letters, numbers and special characters into an object
 const randomFuncions = {
     lower : randomLowerCase,
@@ -17,22 +32,6 @@ const yesSpecCharRadioEl = document.getElementById("yesSpecCharRadio")
 const generatorButtonEl = document.getElementById("generatorButton")
 
 
-
-
-
-const genLowerCase = "abcdefghijklmnopqrstuvwxyz"; // String of lowercase characters
-const genUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //String of uppercase letters
-const genNumbers = "0123456789"; //String of numbers
-const getSpecCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"; //String of special characters
-
-// Randomizing each string of letters, numbers, and special characters
-const randomLowerCase = lowerCase [Math.floor(Math.random() * lowerCase.length)];
-const randomUpperCase = upperCase [Math.floor(Math.random() * upperCase.length)];
-const randomNumbers = numbers [Math.floor(Math.random() * numbers.length)];
-const randomSpecialCharacters = specCharacters[Math.floor(Math.random() * specCharacters.length)];
-
-// Adding all of the variables together to make a random string, one of each variable
-console.log(randomSpecialCharacters);
 
 
 // Slider code
