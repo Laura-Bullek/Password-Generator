@@ -15,7 +15,8 @@ const randomFuncions = {
     lower : randomLowerCase,
     upper: randomUpperCase,
     number: randomNumbers,
-    specCharacters: randomSpecialCharacters
+    noSpecCharacters: null,
+    yesSpecCharacters: randomSpecialCharacters
 };
 
 /* Linking ID elements to the DOM 
@@ -43,11 +44,24 @@ generatorButtonEl.addEventListener("click", function() {
  
   // Changing the inner text of the textarea box with the generated password result,
   // and created the generatePassword function
-  resultEl.innerText = generatePassword (passwordLength, lowerCaseChecked, upperCaseChecked, numbersChecked, noSpecCharChecked, yesSpecCharChecked)
+  resultEl.innerText = generatePassword (
+    lowerCaseChecked, 
+    upperCaseChecked, 
+    numbersChecked, 
+    noSpecCharChecked, 
+    yesSpecCharChecked, 
+    passwordLength
+  );
 });
 
-// Function that will actually be generating the function
+// Will actually be generating the function
 // pulling keys from the randomFunction object
-function generatePassword (lower, upper, number, specCharacters, passwordLength) {
+function generatePassword (lower, upper, number, noSpecCharacters, yesSpecCharacters, passwordLength) {
+  
+    let outputPassword = "";
 
+     const boxesChecked = lower + upper + number + noSpecCharacters + yesSpecCharacters;
+    
+
+    console.log(boxesChecked);
 }
