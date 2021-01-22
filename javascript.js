@@ -1,12 +1,15 @@
-// Putting all of the randomization of letters, numbers and
-// special characters into an object
-
+// Putting all of the randomization of letters, numbers and special characters into an object
 const randomFuncions = {
     lower : randomLowerCase,
     upper: randomUpperCase,
     number: randomNumbers,
     specCharacters: randomSpecialCharacters
 };
+
+/* Linking ID elements to the DOM 
+(passwordLength, lowerCaseButton, upperCaseButton, numbersButton, noSpecCharRadio, and yesSpecCharRadio)*/
+
+
 
 
 
