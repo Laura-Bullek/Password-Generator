@@ -10,9 +10,6 @@ const randomUpperCase = genUpperCase [Math.floor(Math.random() * genUpperCase.le
 const randomNumbers = genNumbers [Math.floor(Math.random() * genNumbers.length)];
 const randomSpecialCharacters = genSpecCharacters [Math.floor(Math.random() * genSpecCharacters.length)];
 
-// Testing each randomizing variable
-console.log(randomSpecialCharacters);
-
 // Putting all of the randomization of letters, numbers and special characters into an object
 const randomFuncions = {
     lower : randomLowerCase,
@@ -31,8 +28,19 @@ const noSpecCharRadioEl = document.getElementById("noSpecCharRadio")
 const yesSpecCharRadioEl = document.getElementById("yesSpecCharRadio")
 const generatorButtonEl = document.getElementById("generatorButton")
 
+// Generate event listener when generatorButton is clicked
+// Changed passwordLength variable from a string to a number
+generatorButtonEl.addEventListener("click", function() {
+  const passwordLength = parseInt(passwordLengthEl.value);
 
+  // Adding variables to see when the checkboxes/radio buttons are clicked
+  const lowerCaseChecked = lowerCaseButtonEl.checked;
+  const upperCaseChecked = upperCaseButtonEl.checked; 
+  const numbersChecked = numbersButtonEl.checked; 
+  const noSpecCharChecked = noSpecCharRadioEl.checked; 
+  const yesSpecCharChecked = yesSpecCharRadioEl.checked; 
+ 
+  console.log(lowerCaseChecked, upperCaseChecked, numbersChecked, noSpecCharChecked, yesSpecCharChecked)
 
-
-// Slider code
-
+  //
+});
