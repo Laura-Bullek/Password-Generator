@@ -7,8 +7,14 @@ const randomFuncions = {
 };
 
 /* Linking ID elements to the DOM 
-(passwordLength, lowerCaseButton, upperCaseButton, numbersButton, noSpecCharRadio, and yesSpecCharRadio)*/
-
+(passwordLength, lowerCaseButton, upperCaseButton, numbersButton, noSpecCharRadio, yesSpecCharRadio, generatorButton)*/
+const passwordLengthEl = document.getElementById("passwordLength")
+const lowerCaseButtonEl = document.getElementById("lowerCaseButton")
+const upperCaseButtonEl = document.getElementById("upperCaseButton")
+const numbersButtonEl = document.getElementById("numbersButton")
+const noSpecCharRadioEl = document.getElementById("noSpecCharRadio")
+const yesSpecCharRadioEl = document.getElementById("yesSpecCharRadio")
+const generatorButtonEl = document.getElementById("generatorButton")
 
 
 
