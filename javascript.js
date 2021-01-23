@@ -65,7 +65,9 @@ function generatePassword (lower, upper, number, noSpecCharacters, yesSpecCharac
     console.log(typesCount);
     
     // Creating objects so each can have a key/value pairs with a boolean value
-     const typesArr = [{lower, upper, number, noSpecCharacters, yesSpecCharacters}]
+     const typesArr = [{lower}, {upper}, {number}, {noSpecCharacters}, {yesSpecCharacters}].filter
+    // Filtering out any value that comes back false (unclicked) and won't be included in the password.
+    (item => Object.values(item)[0]);
 
      console.log(typesArr);
     }
