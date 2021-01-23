@@ -75,12 +75,11 @@ function generatePassword (lower, upper, number, yesSpecCharacters, passwordLeng
       typesArr.forEach(type => {
         const funcName = Object.keys(type)[0];
 
-        generatedPassword += randomFunctions[funcName];
+        generatedPassword = generatedPassword + randomFunctions[funcName];
 
       });
 
     }
     console.log(generatedPassword);
-
 
   }
