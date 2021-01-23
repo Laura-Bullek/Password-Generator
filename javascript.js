@@ -58,19 +58,21 @@ generatorButtonEl.addEventListener("click", function() {
 // pulling keys from the randomFunction object
 function generatePassword (lower, upper, number, noSpecCharacters, yesSpecCharacters, passwordLength) {
   
-    let outputPassword = "";
+    let generatedPassword = "";
 
-    const boxesChecked = lower + upper + number + noSpecCharacters + yesSpecCharacters;
+    const typesCount = lower + upper + number + noSpecCharacters + yesSpecCharacters;
+
+    console.log(typesCount);
     
-    console.log(boxesChecked);
+    // Creating objects so each can have a key/value pairs with a boolean value
+     const typesArr = [{lower, upper, number, noSpecCharacters, yesSpecCharacters}]
 
-    // Creating objects so each can have a boolean value
-    const boxesCheckedArr = [{ lower }, { upper }, { number }, { noSpecCharacters }, { yesSpecCharacters }].filter
+     console.log(typesArr);
+    }
 
     // Filtering out any value that comes back false (unclicked) and won't be included in the password.
-    (item => Object.values(item)[0]);
 
-    // Returning a response when no boxes are checked
-    if (boxesChecked === 0);
-      alert("Please check one or more boxes to continue");
-}
+
+    // // Returning a response when no boxes are checked
+
+    // // Looping over passwordLength and call the generatePassword function for each type
