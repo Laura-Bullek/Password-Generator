@@ -11,21 +11,18 @@ const randomNumbers = genNumbers [Math.floor(Math.random() * genNumbers.length)]
 const randomSpecialCharacters = genSpecCharacters [Math.floor(Math.random() * genSpecCharacters.length)];
 
 // Putting all of the randomization of letters, numbers and special characters into an object
-const randomFuncions = {
+const randomFunctions = {
     lower : randomLowerCase,
     upper: randomUpperCase,
     number: randomNumbers,
-    noSpecCharacters: null,
     yesSpecCharacters: randomSpecialCharacters
 };
-
 /* Linking ID elements to the DOM 
 (passwordLength, lowerCaseButton, upperCaseButton, numbersButton, noSpecCharRadio, yesSpecCharRadio, generatorButton)*/
 const passwordLengthEl = document.getElementById("passwordLength")
 const lowerCaseButtonEl = document.getElementById("lowerCaseButton")
 const upperCaseButtonEl = document.getElementById("upperCaseButton")
 const numbersButtonEl = document.getElementById("numbersButton")
-const noSpecCharRadioEl = document.getElementById("noSpecCharRadio")
 const yesSpecCharRadioEl = document.getElementById("yesSpecCharRadio")
 const resultEl = document.getElementById("result")
 const generatorButtonEl = document.getElementById("generatorButton")
@@ -39,7 +36,6 @@ generatorButtonEl.addEventListener("click", function() {
   const lowerCaseChecked = lowerCaseButtonEl.checked;
   const upperCaseChecked = upperCaseButtonEl.checked; 
   const numbersChecked = numbersButtonEl.checked; 
-  const noSpecCharChecked = noSpecCharRadioEl.checked; 
   const yesSpecCharChecked = yesSpecCharRadioEl.checked; 
  
   // Changing the inner text of the textarea box with the generated password result,
@@ -48,7 +44,6 @@ generatorButtonEl.addEventListener("click", function() {
     lowerCaseChecked, 
     upperCaseChecked, 
     numbersChecked, 
-    noSpecCharChecked, 
     yesSpecCharChecked, 
     passwordLength
   );
@@ -56,25 +51,36 @@ generatorButtonEl.addEventListener("click", function() {
 
 // Will actually be generating the function
 // pulling keys from the randomFunction object
-function generatePassword (lower, upper, number, noSpecCharacters, yesSpecCharacters, passwordLength) {
+function generatePassword (lower, upper, number, yesSpecCharacters, passwordLength) {
   
     let generatedPassword = "";
 
-    const typesCount = lower + upper + number + noSpecCharacters + yesSpecCharacters;
+    const typesCount = lower + upper + number + yesSpecCharacters;
 
     console.log(typesCount);
     
     // Creating objects so each can have a key/value pairs with a boolean value
-     const typesArr = [{lower}, {upper}, {number}, {noSpecCharacters}, {yesSpecCharacters}].filter
+     const typesArr = [{lower}, {upper}, {number}, {yesSpecCharacters}].filter
     // Filtering out any value that comes back false (unclicked) and won't be included in the password.
     (item => Object.values(item)[0]);
 
-     console.log(typesArr);
+    console.log(typesArr);
+
+    // Returning a response when no boxes are checked
+    if (typesCount === 0) {
+      alert("Please check one or more boxes to continue.");
+     }
+    // Looping over passwordLength and call the generatePassword function for each type
+    for(let i=0; i < passwordLength; i += typesCount) {
+      typesArr.forEach(type => {
+        const funcName = Object.keys(type)[0];
+
+        generatedPassword += randomFunctions[funcName];
+
+      });
+
     }
+    console.log(generatedPassword);
 
-    // Filtering out any value that comes back false (unclicked) and won't be included in the password.
 
-
-    // // Returning a response when no boxes are checked
-
-    // // Looping over passwordLength and call the generatePassword function for each type
+  }
