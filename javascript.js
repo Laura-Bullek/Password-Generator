@@ -70,5 +70,7 @@ function generatePassword (lower, upper, number, noSpecCharacters, yesSpecCharac
     // Filtering out any value that comes back false (unclicked) and won't be included in the password.
     (item => Object.values(item)[0]);
 
-    console.log(boxesCheckedArr);
+    // Returning a response when no boxes are checked
+    if (boxesChecked === 0);
+      alert("Please check one or more boxes to continue");
 }
