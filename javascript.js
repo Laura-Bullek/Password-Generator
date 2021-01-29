@@ -65,15 +65,11 @@ function generatePassword (lower, upper, number, yesSpecCharacters, passwordLeng
 
     const typesCount = lower + upper + number + yesSpecCharacters;
 
-    console.log(typesCount);
-    
     // Creating objects so each can have a key/value pairs with a boolean value
      const typesArr = [{lower}, {upper}, {number}, {yesSpecCharacters}].filter
 
     // Filtering out any value that comes back false (unclicked) and won't be included in the password.
     (item => Object.values(item)[0]);
-
-    console.log(typesArr);
 
     // Returning a response when no boxes are checked
     if (typesCount === 0) {
@@ -90,9 +86,7 @@ function generatePassword (lower, upper, number, yesSpecCharacters, passwordLeng
         generatedPassword = generatedPassword + randomFunctions[funcName]();
 
         
-      }
-      console.log(generatedPassword);
-      
+      }      
       const finalPassword = document.getElementById("result");
         finalPassword.value = generatedPassword;
   }
