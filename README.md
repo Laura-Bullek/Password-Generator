@@ -36,7 +36,7 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 
-![About Me Page](https://i.postimg.cc/bYG5K4MB/Password-Generator-Screenshot.png)
+![Password Generator Screenshot](https://i.postimg.cc/bYG5K4MB/Password-Generator-Screenshot.png)
 
 # Installation
 No installations required for this project.
