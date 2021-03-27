@@ -2,7 +2,7 @@
 Third project in UNH web developer program. 
 
 # Description
-The **Responsive-Portfolio** project is the second homework assignment of the November 2020/March 2021 cohort from University of New Hampshire's full-stack coding bootcamp. 
+The **Password Generator** project is the third homework assignment of the November 2020/March 2021 cohort from University of New Hampshire's full-stack coding bootcamp. 
 
 This project required us to create an application that an employee can use to generate a random password based on criteria they’ve selected. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that we write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
 
@@ -38,20 +38,18 @@ THEN the password is either displayed in an alert or written to the page
 
 ![Password Generator Screenshot](https://i.postimg.cc/bYG5K4MB/Password-Generator-Screenshot.png)
 
-# Installation
+## Installation
 No installations required for this project.
 
-# Credits 
+## Credits 
 My web development bootcamp program is offered through the Unniversity of New Hampshire Professional Development & Training and Trilogy Education Services.
 
 November 2020 cohort instructors:
 - Instructor - Scott Byers [GitHub](https://github.com/switch120)
 - TA - Michael Fearnley [GitHub](https://michaelfearnley.com/)
 
-# Usage
+## Usage
 Below are the links to this project:
 [GitHub] (https://github.com/Laura-Bullek/Password-Generator)
 
 [URL] (https://laura-bullek.github.io/Password-Generator/)
-
-The end. 
