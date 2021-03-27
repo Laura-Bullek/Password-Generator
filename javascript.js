@@ -4,7 +4,7 @@ const genUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const genNumbers = "0123456789"; 
 const genSpecCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"; 
 
-// Randomizing each string of letters, numbers, and special characters
+// Randomized each string of letters, numbers, and special characters
 function randomLowerCase () {
   return genLowerCase[Math.floor(Math.random() * genLowerCase.length)]
 };
